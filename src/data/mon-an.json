@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "ten": "Bún Bò Huế",
+    "emoji": "🍜",
+    "moTa": "Linh hồn ẩm thực Cố đô — nước dùng ninh xương bò, sả, mắm ruốc, ớt sa tế. Sợi bún to, ăn kèm thịt bò, giò heo, chả cua.",
+    "gia": "45.000đ",
+    "diem": 4.9,
+    "dacSan": true,
+    "diaChi": "Nhiều quán khắp TP Huế",
+    "tags": ["Nước dùng đậm", "Bún", "Bò"],
+    "thoiGian": "Sáng"
+  },
+  {
+    "id": 2,
+    "ten": "Bánh Bèo",
+    "emoji": "🥟",
+    "moTa": "Bánh nhỏ xinh làm từ bột gạo, hấp chín trong chén nhỏ, rắc tôm chấy, mỡ hành, ăn kèm nước mắm ớt.",
+    "gia": "25.000đ",
+    "diem": 4.7,
+    "dacSan": true,
+    "diaChi": "Quán bà Đỏ — 71 Nguyễn Bỉnh Khiêm",
+    "tags": ["Bánh hấp", "Tôm chấy", "Khai vị"],
+    "thoiGian": "Chiều"
+  },
+  {
+    "id": 3,
+    "ten": "Cơm Hến",
+    "emoji": "🍚",
+    "moTa": "Món dân dã từ hến sông Hương — cơm nguội trộn hến xào, rau sống, đậu phộng, tóp mỡ, ớt sa tế.",
+    "gia": "20.000đ",
+    "diem": 4.8,
+    "dacSan": true,
+    "diaChi": "Cồn Hến — đường Hàn Mặc Tử",
+    "tags": ["Dân dã", "Sông Hương", "Hến"],
+    "thoiGian": "Trưa"
+  },
+  {
+    "id": 4,
+    "ten": "Bánh Khoái",
+    "emoji": "🥮",
+    "moTa": "Bánh chiên giòn vàng ruộm, nhân tôm, thịt, giá đỗ. Cuốn với bánh tráng, rau sống, chấm nước lèo đậu phộng.",
+    "gia": "30.000đ",
+    "diem": 4.6,
+    "dacSan": true,
+    "diaChi": "Quán bà Đỏ — đường Lê Thánh Tôn",
+    "tags": ["Chiên giòn", "Cuốn", "Tôm thịt"],
+    "thoiGian": "Chiều"
+  },
+  {
+    "id": 5,
+    "ten": "Chè Hạt Sen",
+    "emoji": "🍮",
+    "moTa": "Món tráng miệng thanh mát từ hạt sen Tịnh Tâm — nấu với đường phèn, nhãn nhục, thơm dịu.",
+    "gia": "15.000đ",
+    "diem": 4.5,
+    "dacSan": false,
+    "diaChi": "Chè Hẻm — 29 Hùng Vương",
+    "tags": ["Tráng miệng", "Thanh mát", "Hạt sen"],
+    "thoiGian": "Tối"
+  },
+  {
+    "id": 6,
+    "ten": "Bánh Bột Lọc",
+    "emoji": "🍡",
+    "moTa": "Vỏ bánh dai trong suốt làm từ bột năng, nhân tôm thịt rim đậm đà. Gói trong lá chuối, hấp chín.",
+    "gia": "20.000đ",
+    "diem": 4.7,
+    "dacSan": true,
+    "diaChi": "Quán O Xuân — 45 Lê Lợi",
+    "tags": ["Bánh hấp", "Dai ngon", "Tôm thịt"],
+    "thoiGian": "Chiều"
+  }
+]

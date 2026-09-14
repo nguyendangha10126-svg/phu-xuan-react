@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "ten": "Đại Nội Huế",
+    "khuVuc": "Phú Hòa",
+    "loai": "Di tích",
+    "emoji": "🏯",
+    "moTa": "Hoàng thành của triều Nguyễn — Di sản Văn hóa Thế giới UNESCO."
+  },
+  {
+    "id": 2,
+    "ten": "Chợ Đông Ba",
+    "khuVuc": "Phú Hòa",
+    "loai": "Chợ",
+    "emoji": "🛍️",
+    "moTa": "Khu chợ lớn nhất Huế, biểu tượng thương mại của Cố đô."
+  },
+  {
+    "id": 3,
+    "ten": "Cầu Tràng Tiền",
+    "khuVuc": "Phú Hội",
+    "loai": "Cầu",
+    "emoji": "🌉",
+    "moTa": "Cây cầu sắt 6 nhịp bắc qua sông Hương, biểu tượng của Huế."
+  },
+  {
+    "id": 4,
+    "ten": "Lăng Khải Định",
+    "khuVuc": "Hương Thủy",
+    "loai": "Lăng tẩm",
+    "emoji": "🏛️",
+    "moTa": "Lăng vua Khải Định — kiến trúc giao thoa Đông Tây độc đáo."
+  },
+  {
+    "id": 5,
+    "ten": "Lăng Tự Đức",
+    "khuVuc": "Thủy Biều",
+    "loai": "Lăng tẩm",
+    "emoji": "🌳",
+    "moTa": "Khu lăng mộ thơ mộng, được xem là 'Bồng Lai tiên cảnh'."
+  },
+  {
+    "id": 6,
+    "ten": "Chùa Thiên Mụ",
+    "khuVuc": "Kim Long",
+    "loai": "Chùa",
+    "emoji": "🛕",
+    "moTa": "Ngôi chùa cổ nhất Huế (1601), biểu tượng với tháp Phước Duyên."
+  },
+  {
+    "id": 7,
+    "ten": "Sông Hương",
+    "khuVuc": "Toàn TP",
+    "loai": "Danh thắng",
+    "emoji": "🌊",
+    "moTa": "Dòng sông thơ mộng gắn liền với lịch sử và văn hóa Huế."
+  },
+  {
+    "id": 8,
+    "ten": "Cầu Ngói Thanh Toàn",
+    "khuVuc": "Hương Thủy",
+    "loai": "Di tích",
+    "emoji": "🌉",
+    "moTa": "Cầu ngói cổ hơn 200 năm, kiến trúc độc đáo tại làng Thanh Toàn."
+  },
+  {
+    "id": 9,
+    "ten": "Đồi Vọng Cảnh",
+    "khuVuc": "Thủy Biều",
+    "loai": "Danh thắng",
+    "emoji": "⛰️",
+    "moTa": "Điểm ngắm toàn cảnh sông Hương và Kinh thành Huế tuyệt đẹp."
+  },
+  {
+    "id": 10,
+    "ten": "Biển Thuận An",
+    "khuVuc": "Phú Vang",
+    "loai": "Biển",
+    "emoji": "🏖️",
+    "moTa": "Bãi biển gần Huế nhất, nơi sông Hương đổ ra biển Đông."
+  }
+]
