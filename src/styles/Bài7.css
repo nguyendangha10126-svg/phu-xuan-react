@@ -1,0 +1,221 @@
+/* src/styles/Bài7.css */
+/* CSS dùng chung cho Bài 7 — Quản lý sự kiện trong React */
+
+/* ===== Trang tổng ===== */
+.bai7-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+.bai7-page h1 {
+  color: #8b0000;
+  border-bottom: 3px solid #ffd166;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.bai7-section {
+  background: #fff8e7;
+  border: 1px solid #f0d9a8;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.bai7-section h2 {
+  color: #b00020;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* ===== Nút bấm ===== */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #d62828;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover { background: #a51c1c; }
+.btn:disabled { background: #ccc; cursor: not-allowed; }
+
+.btn-phu {
+  background: #457b9d;
+}
+.btn-phu:hover { background: #2f5d78; }
+
+/* ===== Thẻ địa danh ===== */
+.the-dia-danh {
+  border: 1px solid #e0cfa9;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  background: #fffdf6;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.the-dia-danh:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+.the-dia-danh.dang-chon {
+  border-color: #d62828;
+  background: #ffe9e9;
+}
+
+.the-dia-danh label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.the-dia-danh .ten {
+  font-weight: 600;
+  color: #8b0000;
+}
+
+.the-dia-danh .loai {
+  font-size: 12px;
+  background: #ffd166;
+  color: #5a3a00;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.the-dia-danh .mo-ta {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== Nhật ký sự kiện ===== */
+.nhat-ky {
+  background: #1e1e1e;
+  color: #d4ffd4;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 10px 14px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+.nhat-ky div {
+  padding: 2px 0;
+  border-bottom: 1px dashed #333;
+}
+.nhat-ky div:last-child { border-bottom: none; }
+
+/* ===== Bộ lọc ===== */
+.bo-loc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.bo-loc button {
+  padding: 6px 12px;
+  border: 1px solid #d62828;
+  background: #fff;
+  color: #d62828;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.bo-loc button.dang-chon {
+  background: #d62828;
+  color: #fff;
+}
+
+/* ===== Form tìm món ăn ===== */
+.form-tim-mon {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.form-tim-mon input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #cbb68a;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.form-tim-mon input:focus {
+  border-color: #d62828;
+  box-shadow: 0 0 0 2px rgba(214,40,40,0.15);
+}
+.goi-y {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #cbb68a;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+.goi-y button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.goi-y button:hover { background: #ffe9e9; }
+
+/* ===== Kéo thả món ăn ===== */
+.ds-mon-yeu-thich {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mon-an {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #e0cfa9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #fffdf6;
+  cursor: grab;
+}
+.mon-an.dang-keo { opacity: 0.5; }
+.mon-an.keo-qua { border-color: #d62828; background: #ffe9e9; }
+
+.mon-an .tay-cam {
+  cursor: grab;
+  font-size: 18px;
+  color: #a89b74;
+}
+.mon-an .ten-mon { flex: 1; font-weight: 600; }
+.mon-an .gia-mon { color: #8b0000; font-weight: 600; }
+.mon-an .nut-xoa {
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.mon-an .nut-xoa:hover { background: #f8d7da; color: #b00020; }
+
+.thong-bao {
+  margin-top: 10px;
+  font-style: italic;
+  color: #457b9d;
+  min-height: 20px;
+}
