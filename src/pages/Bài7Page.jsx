@@ -10,10 +10,14 @@ import MonAnYeuThich from '../components/Bài7/MonAnYeuThich';
 export default function Bài7Page() {
   return (
     <main className="bai7-page">
-      <h1>Bài 7 — Quản lý sự kiện trong React</h1>
-      <p>
-        Chủ đề: <strong>Địa danh Huế và món ăn Huế</strong>
-      </p>
+      {/* ===== HERO HEADER ===== */}
+      <header className="bai7-hero">
+        <h1>Khám phá Xứ Huế</h1>
+        <p className="phu-de">
+          Hành trình tương tác cùng <strong>Địa danh & Món ăn</strong> cố đô
+        </p>
+        <span className="gach-trang-tri" />
+      </header>
 
       <ThuSuKien />
       <DanhSachDiaDanh />
@@ -21,7 +25,6 @@ export default function Bài7Page() {
       <LuotThichMonAn />
       <TimMonAnHue />
       <MonAnYeuThich />
-
     </main>
   );
 }

@@ -37,7 +37,10 @@ export default function ThuSuKien() {
 
   return (
     <section className="bai7-section">
-      <h2>Lab 1 — Sự kiện đầu tiên &amp; đối tượng sự kiện</h2>
+      <h2>
+  <span className="so-thu-tu">1</span>
+  Nhật ký sự kiện
+</h2>
 
       <p>
         Số lần bấm nút: <strong>{soLanBam}</strong>

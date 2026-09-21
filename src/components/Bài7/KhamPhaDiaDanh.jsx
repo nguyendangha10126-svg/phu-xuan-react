@@ -42,11 +42,19 @@ export default function KhamPhaDiaDanh() {
       className="bai7-section"
       onClickCapture={handleBatSuKienCapture}
     >
-      <h2>Lab 3 — Khám phá địa danh (thẻ có nút lồng nhau)</h2>
+      <h2>
+  <span className="so-thu-tu">3</span>
+  Khám phá chi tiết địa danh
+</h2>
 
-      <p>
-        Số tương tác (đếm mọi cú bấm): <strong>{soTuongTac}</strong>
-      </p>
+      <div style={{ marginBottom: 12 }}>
+  <span className="stat-badge">
+    Tương tác <strong>{soTuongTac}</strong>
+  </span>
+  <span className="stat-badge">
+    Yêu thích <strong>{dsYeuThich.length}</strong>
+  </span>
+</div>
       <p>
         Đã yêu thích: <strong>{dsYeuThich.length}</strong> địa danh
       </p>

@@ -21,7 +21,10 @@ export default function LuotThichMonAn() {
 
   return (
     <section className="bai7-section">
-      <h2>BTVN 1 — Bug "+3 chỉ tăng 1"</h2>
+     <h2>
+  <span className="so-thu-tu">4</span>
+  Thử thách State — "Ảnh chụp"
+</h2>
       <p>
         Lượt thích: <strong>{luotThich}</strong>
       </p>

@@ -93,12 +93,14 @@ export default function MonAnYeuThich() {
 
   return (
     <section className="bai7-section">
-      <h2>Lab 5 — Kéo thả sắp xếp món ăn yêu thích</h2>
+      <h2>
+  <span className="so-thu-tu">6</span>
+  Danh sách món yêu thích
+</h2>
 
-      <p style={{ fontSize: 13, color: '#666' }}>
-        💡 Kéo thả chuột để sắp xếp, hoặc dùng <strong>Alt + ↑/↓</strong> khi
-        thẻ đang focus.
-      </p>
+      <p style={{ fontSize: 13.5, color: 'var(--xam-chu)', marginBottom: 20 }}>
+  💡 Kéo thả chuột để sắp xếp, hoặc dùng <strong>Alt + ↑/↓</strong> khi thẻ đang focus.
+</p>
 
       <ul className="ds-mon-yeu-thich">
         {dsMon.map((mon, viTri) => (

@@ -59,7 +59,10 @@ export default function DanhSachDiaDanh() {
 
   return (
     <section className="bai7-section">
-      <h2>Lab 2 — Chọn nhiều địa danh</h2>
+     <h2>
+  <span className="so-thu-tu">2</span>
+  Bộ sưu tập địa danh
+</h2>
 
       {/* ===== Bộ lọc theo loại ===== */}
       <div className="bo-loc">
@@ -76,13 +79,17 @@ export default function DanhSachDiaDanh() {
       </div>
 
       {/* ===== Thông tin ===== */}
-      <p>
-        Đã chọn: <strong>{dsDaChon.length}</strong> địa danh — Hiện thị:{' '}
-        <strong>{dsHienThi.length}</strong> thẻ
-      </p>
+     <div style={{ marginBottom: 12 }}>
+  <span className="stat-badge">
+    Đã chọn <strong>{dsDaChon.length}</strong>
+  </span>
+  <span className="stat-badge">
+    Hiện thị <strong>{dsHienThi.length}</strong>
+  </span>
+</div>
 
       {/* ===== Nút thao tác nhanh ===== */}
-      <div style={{ marginBottom: 12, display: 'flex', gap: 8 }}>
+     <div className="hang-nut">
         <button className="btn" onClick={handleChonTatCa}>
           Chọn tất cả đang hiện
         </button>
@@ -104,14 +111,10 @@ export default function DanhSachDiaDanh() {
       </div>
 
       {/* ===== Lộ trình ===== */}
-      <p style={{ marginTop: 12 }}>
-        <strong>Lộ trình:</strong>{' '}
-        {dsDaChon.length === 0
-          ? '(chưa chọn địa danh nào)'
-          : dsDaChon
-              .map((id) => diaDanhHue.find((dd) => dd.id === id)?.ten)
-              .join(' → ')}
-      </p>
+      <p className="lo-trinh">
+  <strong>Lộ trình:</strong>{' '}
+  ...
+</p>
     </section>
   );
 }
