@@ -2,6 +2,8 @@
 import '../styles/Bài7.css';
 import ThuSuKien from '../components/Bài7/ThuSuKien';
 import DanhSachDiaDanh from '../components/Bài7/DanhSachDiaDanh';
+import KhamPhaDiaDanh from '../components/Bài7/KhamPhaDiaDanh';
+import LuotThichMonAn from '../components/Bài7/LuotThichMonAn';
 
 export default function Bài7Page() {
   return (
@@ -13,6 +15,9 @@ export default function Bài7Page() {
 
       <ThuSuKien />
       <DanhSachDiaDanh />
+      <KhamPhaDiaDanh />
+      <LuotThichMonAn />
+
     </main>
   );
 }
