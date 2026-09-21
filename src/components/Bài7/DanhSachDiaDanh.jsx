@@ -1,0 +1,117 @@
+// src/components/Bài7/DanhSachDiaDanh.jsx
+// LAB 2 — Phiên bản HOÀN CHỈNH: bộ lọc + derived state + chọn tất cả
+import { useState } from 'react';
+import diaDanhHue from '../../data/diaDanhHue';
+import TheDiaDanh from './TheDiaDanh';
+
+// Danh sách loại địa danh để làm nút lọc
+const DS_LOAI = [
+  { ma: 'tat-ca', nhan: 'Tất cả' },
+  { ma: 'di-tich', nhan: 'Di tích' },
+  { ma: 'chua', nhan: 'Chùa' },
+  { ma: 'lang-tam', nhan: 'Lăng tẩm' },
+  { ma: 'cau', nhan: 'Cầu' },
+  { ma: 'cho', nhan: 'Chợ' },
+];
+
+export default function DanhSachDiaDanh() {
+  // State 1: mảng id các địa danh đang được chọn
+  const [dsDaChon, setDsDaChon] = useState([]);
+
+  // State 2: loại đang được lọc ('tat-ca' = hiện tất cả)
+  const [loaiDangLoc, setLoaiDangLoc] = useState('tat-ca');
+
+  // ✅ DERIVED STATE — tính từ 2 state trên, KHÔNG tạo useState riêng
+  const dsHienThi =
+    loaiDangLoc === 'tat-ca'
+      ? diaDanhHue
+      : diaDanhHue.filter((dd) => dd.loai === loaiDangLoc);
+
+  // Toggle chọn/bỏ 1 địa danh
+  function handleChon(id) {
+    setDsDaChon((truoc) =>
+      truoc.includes(id) ? truoc.filter((x) => x !== id) : [...truoc, id]
+    );
+  }
+
+  // ✅ Bộ lọc — đọc data-loai từ nút bấm qua dataset
+  function handleLoc(e) {
+    const loai = e.currentTarget.dataset.loai;
+    setLoaiDangLoc(loai);
+  }
+
+  // ✅ Chọn tất cả — CHỈ thêm những id chưa có (lọc trùng)
+  function handleChonTatCa() {
+    setDsDaChon((truoc) => {
+      // Lấy các id của dsHienThi chưa nằm trong mảng đã chọn
+      const idMoi = dsHienThi
+        .map((dd) => dd.id)
+        .filter((id) => !truoc.includes(id));
+      // Nối mảng cũ + mảng mới (không trùng)
+      return [...truoc, ...idMoi];
+    });
+  }
+
+  // Bỏ chọn tất cả (tuỳ chọn — cho gọn)
+  function handleBoChonTatCa() {
+    setDsDaChon([]);
+  }
+
+  return (
+    <section className="bai7-section">
+      <h2>Lab 2 — Chọn nhiều địa danh</h2>
+
+      {/* ===== Bộ lọc theo loại ===== */}
+      <div className="bo-loc">
+        {DS_LOAI.map((l) => (
+          <button
+            key={l.ma}
+            data-loai={l.ma}
+            className={loaiDangLoc === l.ma ? 'dang-chon' : ''}
+            onClick={handleLoc}
+          >
+            {l.nhan}
+          </button>
+        ))}
+      </div>
+
+      {/* ===== Thông tin ===== */}
+      <p>
+        Đã chọn: <strong>{dsDaChon.length}</strong> địa danh — Hiện thị:{' '}
+        <strong>{dsHienThi.length}</strong> thẻ
+      </p>
+
+      {/* ===== Nút thao tác nhanh ===== */}
+      <div style={{ marginBottom: 12, display: 'flex', gap: 8 }}>
+        <button className="btn" onClick={handleChonTatCa}>
+          Chọn tất cả đang hiện
+        </button>
+        <button className="btn btn-phu" onClick={handleBoChonTatCa}>
+          Bỏ chọn tất cả
+        </button>
+      </div>
+
+      {/* ===== Danh sách địa danh (đã lọc) ===== */}
+      <div className="danh-sach">
+        {dsHienThi.map((dd) => (
+          <TheDiaDanh
+            key={dd.id}
+            diaDanh={dd}
+            dangChon={dsDaChon.includes(dd.id)}
+            onChon={handleChon}
+          />
+        ))}
+      </div>
+
+      {/* ===== Lộ trình ===== */}
+      <p style={{ marginTop: 12 }}>
+        <strong>Lộ trình:</strong>{' '}
+        {dsDaChon.length === 0
+          ? '(chưa chọn địa danh nào)'
+          : dsDaChon
+              .map((id) => diaDanhHue.find((dd) => dd.id === id)?.ten)
+              .join(' → ')}
+      </p>
+    </section>
+  );
+}

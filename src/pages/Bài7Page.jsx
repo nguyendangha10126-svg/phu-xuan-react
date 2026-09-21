@@ -1,6 +1,7 @@
 // src/pages/Bài7Page.jsx
 import '../styles/Bài7.css';
 import ThuSuKien from '../components/Bài7/ThuSuKien';
+import DanhSachDiaDanh from '../components/Bài7/DanhSachDiaDanh';
 
 export default function Bài7Page() {
   return (
@@ -11,6 +12,7 @@ export default function Bài7Page() {
       </p>
 
       <ThuSuKien />
+      <DanhSachDiaDanh />
     </main>
   );
 }
