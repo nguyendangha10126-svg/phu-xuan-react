@@ -1,6 +1,6 @@
 // src/components/Bài7/DanhSachDiaDanh.jsx
-// LAB 2 — Phiên bản HOÀN CHỈNH: bộ lọc + derived state + chọn tất cả
-import { useState } from 'react';
+// LAB 2 + BONUS: bộ lọc + derived state + chọn tất cả + useCallback
+import { useState, useCallback } from 'react';
 import diaDanhHue from '../../data/diaDanhHue';
 import TheDiaDanh from './TheDiaDanh';
 
@@ -27,35 +27,35 @@ export default function DanhSachDiaDanh() {
       ? diaDanhHue
       : diaDanhHue.filter((dd) => dd.loai === loaiDangLoc);
 
-  // Toggle chọn/bỏ 1 địa danh
-  function handleChon(id) {
+  // ✅ useCallback — giữ cùng tham chiếu hàm qua các lần render
+  // deps = [] vì chỉ dùng setDsDaChon (ổn định) và id truyền vào
+  const handleChon = useCallback((id) => {
     setDsDaChon((truoc) =>
       truoc.includes(id) ? truoc.filter((x) => x !== id) : [...truoc, id]
     );
-  }
+  }, []);
 
   // ✅ Bộ lọc — đọc data-loai từ nút bấm qua dataset
-  function handleLoc(e) {
+  const handleLoc = useCallback((e) => {
     const loai = e.currentTarget.dataset.loai;
     setLoaiDangLoc(loai);
-  }
+  }, []);
 
   // ✅ Chọn tất cả — CHỈ thêm những id chưa có (lọc trùng)
-  function handleChonTatCa() {
+  // deps = [dsHienThi] vì hàm dùng biến dsHienThi bên trong
+  const handleChonTatCa = useCallback(() => {
     setDsDaChon((truoc) => {
-      // Lấy các id của dsHienThi chưa nằm trong mảng đã chọn
       const idMoi = dsHienThi
         .map((dd) => dd.id)
         .filter((id) => !truoc.includes(id));
-      // Nối mảng cũ + mảng mới (không trùng)
       return [...truoc, ...idMoi];
     });
-  }
+  }, [dsHienThi]);
 
-  // Bỏ chọn tất cả (tuỳ chọn — cho gọn)
-  function handleBoChonTatCa() {
+  // Bỏ chọn tất cả
+  const handleBoChonTatCa = useCallback(() => {
     setDsDaChon([]);
-  }
+  }, []);
 
   return (
     <section className="bai7-section">
